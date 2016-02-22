@@ -1,0 +1,15 @@
+<!-- {{songs}} -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <img src="{{cover}}">
+    </div>
+    <div class="col-sm-6">
+      <div ng-repeat="song in songs">
+
+        <li class="playsong" data-url="{{song.url}}">  {{song.name}} </li>
+      </div>
+      <a href="#/"> Revenir à l'acceuil </a>
+    </div>
+  </div>
+</div>
