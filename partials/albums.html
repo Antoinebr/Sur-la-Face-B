@@ -1,7 +1,8 @@
-
-
-
-<img class="img-responsive" src="http://lorempicsum.com/futurama/1900/300/4">
+<header>
+  <div class="bg-img clearfix" style="background-image: url('{{cover}}');">
+    <h1> Volume IV</h1>
+  </div>
+</header>
 
 <hr/>
 
@@ -9,6 +10,7 @@
   <div class="row">
     <div class="col-sm-6">
       <img src="{{cover}}">
+      <button id="like-vol-8" class="like-btn"><i class="fa fa-heart-o"></i>  <span>5 </span> personnes aiment cette playlist</button>
     </div>
     <div class="col-sm-6">
       <div ng-repeat="song in songs">

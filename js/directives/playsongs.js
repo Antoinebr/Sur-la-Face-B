@@ -1,4 +1,4 @@
-var audio = null;
+var wavesurfer = null;
 
 // Inclure des ordres JQuery dans une directive
 app.directive('playsong',function(){
@@ -20,20 +20,41 @@ app.directive('playsong',function(){
 
         /**
         *
-        * Si un son est deja en lecture on le pause
+        * Si un son est deja en lecture on le destroy
         *
         */
-        if(audio !== null){
-          audio.pause();
+        if(wavesurfer !== null){
+          wavesurfer.destroy();
         }
+
 
         /**
         *
-        * Créer l'objet audio et joue le mp3
+        *	Créer la WAVE
         *
         */
-        audio = new Audio(songUrl);
-        audio.play();
+
+        wavesurfer = WaveSurfer.create({
+          container: '#waveform',
+          waveColor: 'rgba(0, 0, 0, 0.68)',
+          progressColor: '#337ab7',
+          height : 60,
+          barWidth: 2
+        });
+
+
+        /**
+        *
+        * Charge et joue le mp3
+        *
+        */
+        wavesurfer.load(songUrl);
+
+        wavesurfer.on('ready', function () {
+          wavesurfer.play();
+
+        });
+
 
 
         /**
@@ -43,11 +64,12 @@ app.directive('playsong',function(){
         */
         setInterval(function(){
 
-          var minutes = Math.floor(audio.currentTime / 60);
+          var currentTime = wavesurfer.getCurrentTime();
+          var minutes = Math.floor(currentTime / 60);
           minutes = Math.round(minutes);
           if(minutes < 10) minutes = '0'+minutes; // on ajoute un zero initial
 
-          var seconds = audio.currentTime % 60;
+          var seconds = currentTime % 60;
           seconds = Math.round(seconds); // on ajoute un zero initial
           if(seconds < 10) seconds = '0'+seconds;
 
@@ -61,9 +83,9 @@ app.directive('playsong',function(){
         * Affiche la durée total en m:s
         *
         */
-        audio.addEventListener("loadeddata", function() {
-          console.log(audio.duration);
-          $('player .duration').text( Math.round((audio.duration/60)*100) /100);
+        wavesurfer.on('ready', function () {
+          var duration = wavesurfer.getDuration();
+          $('player .duration').text( Math.round((duration/60)*100) /100);
         });
 
 
@@ -110,8 +132,8 @@ app.directive('pausesong',function(){
       element.click(function(e){
         e.preventDefault();
 
-        if(audio !== null){
-          audio.pause();
+        if(wavesurfer !== null){
+          wavesurfer.pause();
         }
 
       }); // click
@@ -133,8 +155,8 @@ app.directive('playsong',function(){
       element.click(function(e){
         e.preventDefault();
 
-        if(audio !== null){
-          audio.play();
+        if(wavesurfer !== null){
+          wavesurfer.play();
         }
 
       }); // click
