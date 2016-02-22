@@ -1,18 +1,131 @@
+var audio = null;
 
 // Inclure des ordres JQuery dans une directive
 app.directive('playsong',function(){
   return{
     restrict: "C", // restriction sur une classe
-
     link: function(scope,element, attrs){
       ///console.log(scope);
       element.click(function(e){
         e.preventDefault();
 
+        // On récupère l'url
         var songUrl = $(element).data('url');
 
-        var audio = new Audio(songUrl);
+        // On récupère le nom
+        var songName = $(element).text();
+
+        // On injecte le nom dans la page
+        $('player h2').text(songName);
+
+        /**
+        *
+        * Si un son est deja en lecture on le pause
+        *
+        */
+        if(audio !== null){
+          audio.pause();
+        }
+
+        /**
+        *
+        * Créer l'objet audio et joue le mp3
+        *
+        */
+        audio = new Audio(songUrl);
         audio.play();
+
+
+        /**
+        *
+        * Met à jour le timer
+        *
+        */
+        setInterval(function(){
+          $('player .curent-time').text( Math.round((audio.currentTime/60)*100) /100);
+        },1000);
+
+
+        /**
+        *
+        * Affiche la durée total en m:s
+        *
+        */
+        audio.addEventListener("loadeddata", function() {
+          console.log(audio.duration);
+          $('player .duration').text( Math.round((audio.duration/60)*100) /100);
+        });
+
+
+
+
+
+      }); // click
+    }
+  };
+});
+
+
+
+
+
+app.directive('player',function(){
+  return{
+    restrict: "E", // restriction sur un element
+
+    link: function(scope,element, attrs){
+
+      element.click(function(e){
+        e.preventDefault();
+
+      }); // click
+
+
+    }
+  };
+});
+
+
+/**
+*
+* Permet de mettre en pause le mp3
+*
+*/
+app.directive('pausesong',function(){
+  return{
+    restrict: "E",
+
+    link: function(scope,element, attrs){
+
+      element.click(function(e){
+        e.preventDefault();
+
+        if(audio !== null){
+          audio.pause();
+        }
+
+      }); // click
+    }
+  };
+});
+
+
+/**
+*
+* Permet de repredre la lecture du mp3
+*
+*/
+app.directive('playsong',function(){
+  return{
+    restrict: "E",
+    link: function(scope,element, attrs){
+      ///console.log(scope);
+      element.click(function(e){
+        e.preventDefault();
+
+        if(audio !== null){
+          audio.play();
+        }
 
       }); // click
     }
