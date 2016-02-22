@@ -14,18 +14,7 @@
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900,900italic' rel='stylesheet' type='text/css'>
 </head>
 
-<!-- <header class="header">
-<div class="container-video">
-<video id="bg" autoplay="true" loop="true" muted="true">
-<source src="img/video.mp4" type='video/mp4'>
-<source src="img/video.webm" type='video/webm'>
-</video>
-<div class="header-black-box">
-<h1> Sur la face B</h1> <span>0<?php echo rand(2,5);?></span>
-<p> <?php  echo $phrase[$phraseHasard]; ?></p>
-</div>
-</div>
-</header> -->
+
 
 <body ng-app="myApp">
   <div ng-view></div>
@@ -33,6 +22,12 @@
 </body>
 
 <hr>
+<footer>
+  <p> Sur La Face B 2014 | Code &amp; Design par <a href="http://www.antoinebrossault.com" target="_blank">Antoine Brossault</a>
+    <br>
+    <a href="https://twitter.com/surlaface_B"><i class="fa fa-twitter fa-2x"></i></a>
+  </p>
+</footer>
 
 <script src="libs/angular.js"></script>
 <script src="libs/angular-route.js"></script>
@@ -44,4 +39,5 @@
 <script src="js/controller/comments.js"></script>
 <script src="js/controller/posts.js"></script>
 <script src="js/directives/playsongs.js"></script>
+<script src="js/directives/home.js"></script>
 </html>

@@ -42,7 +42,17 @@ app.directive('playsong',function(){
         *
         */
         setInterval(function(){
-          $('player .curent-time').text( Math.round((audio.currentTime/60)*100) /100);
+
+          var minutes = Math.floor(audio.currentTime / 60);
+          minutes = Math.round(minutes);
+          if(minutes < 10) minutes = '0'+minutes; // on ajoute un zero initial
+
+          var seconds = audio.currentTime % 60;
+          seconds = Math.round(seconds); // on ajoute un zero initial
+          if(seconds < 10) seconds = '0'+seconds;
+
+          $('player .curent-time').text(minutes+' : '+seconds);
+
         },1000);
 
 
