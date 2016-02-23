@@ -12,7 +12,11 @@
   <div class="row">
     <div class="col-sm-6">
       <img class="album-cover" src="{{cover}}">
-      <button id="like-vol-8" class="like-btn"><i class="fa fa-heart-o"></i>  <span>5 </span> personnes aiment cette playlist</button>
+
+      <div ng-app="myApp" ng-controller="LikesCtrl">
+        <button  class="like-btn likebtn"><i class="fa fa-heart-o"></i>  <span>{{likesNum}} </span> personnes aiment cette playlist</button>
+      </div>
+
     </div>
     <div class="col-sm-6">
       <div ng-repeat="song in songs">

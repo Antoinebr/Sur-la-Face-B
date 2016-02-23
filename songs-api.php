@@ -2,22 +2,22 @@
 
 function romanic_number($integer, $upcase = true)
 {
-    $table = array('M'=>1000, 'CM'=>900, 'D'=>500, 'CD'=>400, 'C'=>100, 'XC'=>90, 'L'=>50, 'XL'=>40, 'X'=>10, 'IX'=>9, 'V'=>5, 'IV'=>4, 'I'=>1);
-    $return = '';
-    while($integer > 0)
+  $table = array('M'=>1000, 'CM'=>900, 'D'=>500, 'CD'=>400, 'C'=>100, 'XC'=>90, 'L'=>50, 'XL'=>40, 'X'=>10, 'IX'=>9, 'V'=>5, 'IV'=>4, 'I'=>1);
+  $return = '';
+  while($integer > 0)
+  {
+    foreach($table as $rom=>$arb)
     {
-        foreach($table as $rom=>$arb)
-        {
-            if($integer >= $arb)
-            {
-                $integer -= $arb;
-                $return .= $rom;
-                break;
-            }
-        }
+      if($integer >= $arb)
+      {
+        $integer -= $arb;
+        $return .= $rom;
+        break;
+      }
     }
+  }
 
-    return $return;
+  return $return;
 }
 
 $dir = "songs";
@@ -52,10 +52,10 @@ function list_mp3($volName){
 
 
   $volNum =  explode('-',$volName);
-  $volNum = romanic_number(intval($volNum[1]));
+  $volNumRom = romanic_number(intval($volNum[1]));
 
 
-  $list = array("song" =>$listo,"cover" => $cover, "title" => $volNum);
+  $list = array("song" =>$listo,"cover" => $cover, "title" => $volNumRom, "volnum" => $volNum[1]);
 
   return $list;
 }
