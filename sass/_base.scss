@@ -1,3 +1,13 @@
+// MIXINS !!
+
+@mixin transform-scale($x:1, $y:1){
+	-webkit-transform: scale($x, $y);
+	-moz-transform   : scale($x, $y);
+	-o-transform     : scale($x, $y);
+	-ms-transform    : scale($x, $y);
+	transform        : scale($x, $y);
+}
+
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -57,7 +67,7 @@ html[xmlns] .clearfix {
 	top: 40vh;
 	left: 5%;
 	width: 90vw;
-	height: 170px;
+	height: 192px;
 	background-color: black;
 }
 .container-video {
@@ -86,7 +96,6 @@ html[xmlns] .clearfix {
 	width: 100%;
 	display: block;
 	overflow: hidden;
-	margin-bottom: 80px;
 	.bg-img{
 		position: absolute;
 		top: 0px;
@@ -114,7 +123,11 @@ html[xmlns] .clearfix {
 
 .home-cover-container{
 	margin-top: 50px;
-	img{display: block; margin: auto; margin-bottom: 20px;}
+	img{
+		display: block;
+		margin: auto;
+		margin-bottom: 20px;
+	}
 }
 
 .album-cover{
@@ -461,4 +474,23 @@ li.playsong {
 		-moz-opacity: 0.5;
 		opacity: 0.5;
 	}
+}
+
+.player{
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	background-color: #FFF;
+	border-top: 1px solid #eee;
+	h2{
+		margin-top: 5px;
+	}
+}
+
+.back-home{
+	display: block;
+	margin: auto;
+	margin-bottom: 40px;
+	margin-top: 40px;
+
 }

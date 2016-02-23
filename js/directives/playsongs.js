@@ -38,7 +38,7 @@ app.directive('playsong',function(){
           container: '#waveform',
           waveColor: 'rgba(0, 0, 0, 0.68)',
           progressColor: '#337ab7',
-          height : 60,
+          height : 30,
           barWidth: 2
         });
 
