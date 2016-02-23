@@ -1,7 +1,8 @@
-# Sur-la-Face-B
-Music (playlist) App with angular.js
+![mockup](http://img15.hostingpics.net/pics/983086Capturedecran20160224a000244.png)
 
+# Sur la face B
+Music (playlist & music player) App with angular.js
 
-## Mockup player
+## Demo
 
-![mockup](http://img15.hostingpics.net/pics/617403slfb.png)
+http://surlafaceb.tk/
