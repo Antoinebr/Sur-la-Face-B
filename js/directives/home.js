@@ -43,3 +43,26 @@ app.directive('randnum',function(){
     }
   };
 });
+
+
+
+/**
+*
+* Renvoie un nombre aléatoire
+*
+*/
+app.directive('blur',function(){
+  return{
+    restrict: "C", // restriction sur un element
+
+    link: function(scope,element, attrs){
+
+      $(element).blurjs({
+        customClass: 'blurjs',
+        radius: 5,
+        persist: false
+      });
+
+    }
+  };
+});

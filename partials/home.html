@@ -18,24 +18,23 @@
       <h1><span>Nos</span> Playlists</h1>
     </div>
     <div class="headline-down">
-      <p> Détendez vous vous êtes au </br>
-        bon endroit </p>
+      <p> Détendez vous vous êtes au bon endroit </p>
+    </div>
+
+  </section>
+
+
+
+
+  <div class="row">
+
+    <div ng-repeat="post in posts">
+      <div class="col-md-4 home-cover-container">
+        <a href="#/volume/{{$index}}"><img class="home-cover  img-responsive " src="{{post.cover}}"></a>
       </div>
 
-    </section>
+    </div> <!-- ng -reapea -->
 
+  </div> <!-- row -->
 
-
-
-    <div class="row">
-
-        <div ng-repeat="post in posts">
-          <div class="col-md-4 home-cover-container">
-            <a href="#/volume/{{$index}}"><img class="home-cover img-responsive " src="{{post.cover}}"></a>
-          </div>
-
-        </div> <!-- ng -reapea -->
-
-    </div> <!-- row -->
-
-  </div> <!-- container -->
+</div> <!-- container -->
