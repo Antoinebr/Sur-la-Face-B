@@ -15,7 +15,7 @@ function get_likes($id_item){
 
 }
 
-function check_likes_ip($ip, $id_item){
+function ip_can_like($ip, $id_item){
   global $bdd;
   $reponse = $bdd->query('SELECT rate FROM likes WHERE ip ="'.$ip.'" AND id_item ="'.$id_item.'" ');
 
@@ -23,8 +23,22 @@ function check_likes_ip($ip, $id_item){
 
   #return $donnees['nb_likes'];
   $reponse->closeCursor();
-  return $donnees['rate'];
 
+  return (empty($donnees['rate'])) ? true : false;
+
+}
+
+
+function add_likes_ip($ip, $id_item){
+  global $bdd;
+
+  $req = $bdd->prepare('INSERT INTO likes(id_item, ip, rate, dt_rated) VALUES(:id_item, :ip, :rate, :dt_rated)');
+  $req->execute(array(
+    'id_item' => $id_item,
+    'ip' => $ip,
+    'rate' => 1,
+    'dt_rated' => date("Y-m-d G:i:s")
+  ));
 
 }
 

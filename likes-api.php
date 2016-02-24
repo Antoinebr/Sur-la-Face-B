@@ -2,9 +2,32 @@
 include('functions.php');
 
 
-echo get_likes('like-vol-'.$_GET['id']);
+echo (isset($_GET['id'])) ? get_likes('like-vol-'.htmlspecialchars($_GET['id'])) : "" ;
 
-//echo 10*$_GET['id'];
+$ip = '192.168.0.'.rand(0,9999);
+
+if(isset($_POST)){
+
+  $params = json_decode(file_get_contents('php://input'),true);
+
+  if (isset($params['id'])){
+
+    if(ip_can_like($ip, 'like-vol-'.htmlspecialchars($params['id']))){
+
+      add_likes_ip($ip,'like-vol-'.htmlspecialchars($params['id']));
+
+      echo "true";
+
+    }else{
+
+      echo "false";
+
+    }
+  }
+
+
+}
+
 
 
 

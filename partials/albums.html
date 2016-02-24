@@ -1,9 +1,14 @@
-<header class="bg-img-container">
-  <div class="bg-img clearfix blur" style="background-image: url('{{cover}}');"></div>
-  <div class="title-container">
-    <h1> Volume {{title}}</h1>
-  </div>
-</header>
+<div class="container">
+  <section class="premiere-section">
+
+    <div class="headline-top">
+      <h1><span>Volume</span> {{title}}</h1>
+    </div>
+    <div class="headline-down">
+    </div>
+
+  </section>
+</div> <!-- container -->
 
 <a href="./#/" title="Retour à l'acceuil"><img class="back-home" src="./img/icons/backhome.svg"></a>
 
@@ -11,10 +16,10 @@
 
   <div class="row">
     <div class="col-sm-6">
-      <img class="album-cover" src="{{cover}}">
+      <img class="album-cover img-responsive" src="{{cover}}">
 
       <div ng-app="myApp" ng-controller="LikesCtrl">
-        <button  class="like-btn likebtn"><i class="fa fa-heart-o"></i>  <span>{{likesNum}} </span> personnes aiment cette playlist</button>
+        <button  class="like-btn likebtn" data-likeid="{{volnum}}"><i class="fa fa-heart-o"></i>  <span>{{likesNum}} </span> personnes aiment cette playlist</button>
       </div>
 
     </div>

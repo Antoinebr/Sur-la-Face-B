@@ -23,7 +23,11 @@ app.factory('Post', function ($http, $q){
       var deferred = $q.defer();
       posts = {};
       var posts = factory.getPosts().then(function(posts){
-        posts = posts[id];
+
+        var result = findIndexInData(posts,'volnum',id);
+
+        posts = posts[result];
+
         deferred.resolve(posts);
       }, function(msg){
         deferred.reject(msg);
