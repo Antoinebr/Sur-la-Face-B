@@ -523,3 +523,8 @@ li.playsong {
   color: #949494;
   font-style: italic;
 }
+
+/* line 505, sass/_base.scss */
+.playsong {
+  cursor: pointer;
+}

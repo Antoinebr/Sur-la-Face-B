@@ -331,7 +331,7 @@ footer p {
 	display: block;
 	margin: auto;
 	margin-top: 25px;
-	margin-bottom: 25px; 
+	margin-bottom: 25px;
 }
 
 li.playsong {
@@ -500,4 +500,8 @@ li.playsong {
 	text-align: center;
 	color: #949494;
 	font-style: italic;
+}
+
+.playsong{
+	cursor: pointer;
 }
