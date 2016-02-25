@@ -23,6 +23,12 @@ app.directive('likebtn',function($http){
           if(data == "true"){
             var likenum = parseInt($(element).find('span').text());
             $(element).find('span').text(likenum+1);
+          }else{
+            if($('.like-error').length !== 0) return;
+            $(element).after('<p class="error like-error">Vous avez déja voté </p>');
+            setTimeout(function(){
+              $('.like-error').fadeOut(1000).remove();
+            },1500);
           }
         }).error(function(data, status, headers, config) {
           //$scope.status = status;

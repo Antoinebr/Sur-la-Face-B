@@ -515,3 +515,10 @@ li.playsong {
   margin-bottom: 40px;
   margin-top: 40px;
 }
+
+/* line 498, sass/_base.scss */
+.error {
+  text-align: center;
+  color: #949494;
+  font-style: italic;
+}
