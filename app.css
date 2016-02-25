@@ -346,6 +346,7 @@ footer p {
 /* line 321, sass/_base.scss */
 .like-btn {
   width: 340px;
+  max-width: 100%;
   height: 30px;
   cursor: pointer;
   background-color: transparent;
@@ -355,21 +356,21 @@ footer p {
   border: solid 1px black;
   display: block;
   margin: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
-/* line 336, sass/_base.scss */
+/* line 337, sass/_base.scss */
 li.playsong {
   margin-bottom: 16px;
 }
 
-/* line 341, sass/_base.scss */
+/* line 342, sass/_base.scss */
 .hidden {
   display: none;
 }
 
-/* line 345, sass/_base.scss */
+/* line 346, sass/_base.scss */
 .back-to-top {
   width: 50px;
   height: 50px;
@@ -380,7 +381,7 @@ li.playsong {
   display: none;
 }
 
-/* line 355, sass/_base.scss */
+/* line 356, sass/_base.scss */
 .box {
   width: 350px;
   height: 100px;
@@ -392,13 +393,13 @@ li.playsong {
   border: 1px solid #000;
 }
 
-/* line 366, sass/_base.scss */
+/* line 367, sass/_base.scss */
 .box .headline-down {
   margin-left: 0px;
   margin-bottom: 10px;
 }
 
-/* line 371, sass/_base.scss */
+/* line 372, sass/_base.scss */
 .box-anim-enter {
   -webkit-animation: box-anim-enter 0.5s linear;
   animation: box-anim-enter 0.5s linear;
@@ -422,7 +423,7 @@ li.playsong {
     right: 0px;
   }
 }
-/* line 398, sass/_base.scss */
+/* line 399, sass/_base.scss */
 .box-anim-leave {
   -webkit-animation: box-anim-leave 0.5s linear;
   animation: box-anim-leave 0.5s linear;
@@ -446,7 +447,7 @@ li.playsong {
     right: -500px;
   }
 }
-/* line 426, sass/_base.scss */
+/* line 427, sass/_base.scss */
 .play {
   position: absolute;
   top: 30px;
@@ -457,7 +458,7 @@ li.playsong {
   opacity: 0.5;
 }
 
-/* line 436, sass/_base.scss */
+/* line 437, sass/_base.scss */
 .play .fa-play {
   line-height: 380px;
   color: #000;
@@ -467,7 +468,7 @@ li.playsong {
   animation: opacite 0.3s linear;
 }
 
-/* line 445, sass/_base.scss */
+/* line 446, sass/_base.scss */
 .play .fa-pause {
   line-height: 380px;
   color: #000;
@@ -495,7 +496,7 @@ li.playsong {
     opacity: 0.5;
   }
 }
-/* line 479, sass/_base.scss */
+/* line 480, sass/_base.scss */
 .player {
   width: 100%;
   position: fixed;
@@ -503,12 +504,12 @@ li.playsong {
   background-color: #FFF;
   border-top: 1px solid #eee;
 }
-/* line 485, sass/_base.scss */
+/* line 486, sass/_base.scss */
 .player h2 {
   margin-top: 5px;
 }
 
-/* line 490, sass/_base.scss */
+/* line 491, sass/_base.scss */
 .back-home {
   display: block;
   margin: auto;
@@ -516,7 +517,7 @@ li.playsong {
   margin-top: 40px;
 }
 
-/* line 498, sass/_base.scss */
+/* line 499, sass/_base.scss */
 .error {
   text-align: center;
   color: #949494;
