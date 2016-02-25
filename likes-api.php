@@ -4,7 +4,7 @@ include('functions.php');
 
 echo (isset($_GET['id'])) ? get_likes('like-vol-'.htmlspecialchars($_GET['id'])) : "" ;
 
-$ip = '192.168.0.'.rand(0,9999);
+$ip = htmlspecialchars($_SERVER['REMOTE_ADDR']);
 
 if(isset($_POST)){
 

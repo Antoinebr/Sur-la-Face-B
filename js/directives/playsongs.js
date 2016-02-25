@@ -9,6 +9,8 @@ app.directive('playsong',function(){
       element.click(function(e){
         e.preventDefault();
 
+      
+
         // On récupère l'url
         var songUrl = $(element).data('url');
 

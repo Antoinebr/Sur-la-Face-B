@@ -48,7 +48,7 @@ app.directive('randnum',function(){
 
 /**
 *
-* Renvoie un nombre aléatoire
+* Blurr une image
 *
 */
 app.directive('blur',function(){

@@ -14,15 +14,12 @@ app.directive('likebtn',function($http){
       element.click(function(e){
         e.preventDefault();
 
-        //  console.log(scope.volnum);
-
 
         $http({
           url: "likes-api.php",
           method: "POST",
           data: {"id":scope.volnum}
         }).success(function(data, status, headers, config) {
-          console.log(data);
           if(data == "true"){
             var likenum = parseInt($(element).find('span').text());
             $(element).find('span').text(likenum+1);
@@ -30,6 +27,7 @@ app.directive('likebtn',function($http){
         }).error(function(data, status, headers, config) {
           //$scope.status = status;
         });
+
 
       }); // click
     }

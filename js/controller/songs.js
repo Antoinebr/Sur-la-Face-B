@@ -6,7 +6,6 @@ app.controller('SongsCtrl', function ($scope, Post, $routeParams) {
     $scope.songs = post.song;
     $scope.title = post.title;
     $scope.volnum = post.volnum;
-    console.log(post);
   }, function (msg){
     alert(msg);
   });
