@@ -5,11 +5,11 @@ app.directive('playsong',function(){
   return{
     restrict: "C", // restriction sur une classe
     link: function(scope,element, attrs){
-      ///console.log(scope);
+      console.log(scope);
       element.click(function(e){
         e.preventDefault();
 
-      
+
 
         // On récupère l'url
         var songUrl = $(element).data('url');

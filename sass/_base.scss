@@ -58,115 +58,15 @@ html[xmlns] .clearfix {
 	height: 1%;
 }
 
-.header{
 
-}
 
-.header-black-box{
-	position: absolute;
-	top: 40vh;
-	left: 5%;
-	width: 90vw;
-	height: 192px;
-	background-color: black;
-}
-.container-video {
-	height: 100vh;
-	width: 100vw;
-	overflow: hidden;
-	background-attachment: fixed;
-	background-position: center top;
 
-}
-
-.bg-img{
-	background-attachment: fixed;
-	background-position: center bottom;
-	background-repeat: no-repeat;
-	background-size: cover;
-	margin-bottom: -10px;
-	margin-left: -10px;
-	margin-right: -10px;
-	margin-top: -10px;
-}
-
-.bg-img-container{
-	position: relative;
-	height: 300px;
-	width: 100%;
-	display: block;
-	overflow: hidden;
-	.bg-img{
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		right: 0px;
-		bottom: 0px;
-		z-index: 1;
-	}
-	.title-container{
-		position: absolute;
-		width: 50%;
-		left: 50%;
-		margin-left: -25%;
-		top: 100px;
-		z-index: 2;
-		background-color: #000;
-		height: 35%;
-		padding-top: 1%;
-		h1{
-			color: #FFF;
-			text-align: center;
-		}
-	}
-}
-
-.home-cover-container{
-	margin-top: 50px;
-	img{
-		display: block;
-		margin: auto;
-		margin-bottom: 20px;
-	}
-}
 
 .album-cover{
 	display: block;
 	margin: auto;
 }
 
-.header-black-box span{
-	color: #FFF;
-	position: absolute;
-	top: 55px;
-	left: 350px;
-}
-
-#bg{
-
-	width: 100%;
-	display: block;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-
-}
-
-.header-black-box h1{
-	font-family: 'Libre Baskerville', serif;
-	color: #FFF;
-	padding-top: 60px;
-	padding-left: 15px;
-	font-weight: 300;
-	font-size: 50px;
-}
-
-.header-black-box p{
-	color: #9e9e9e;
-	font-style: italic;
-	padding-left: 15px;
-	letter-spacing: 10px;
-}
 
 .premiere-section{
 	margin-top: 50px;
@@ -186,123 +86,6 @@ html[xmlns] .clearfix {
 }
 
 
-
-.article {
-	text-align: center;
-	margin-top: 100px;
-}
-
-.article-container{
-	width: 340px;
-	display: inline-block;
-	vertical-align: top;
-}
-.article-container ul{
-	list-style: none;
-}
-.article-container li{
-	font-family: 'Lato', sans-serif;
-	padding-top: 11px;
-	font-size: 13px;
-
-	a{
-		font-family: inherit;
-		&:hover{
-			text-decoration: underline;
-		}
-	}
-
-}
-
-.playing{
-	a{
-		&:before{
-			content: "▶";
-			margin-right: 3px;
-			position: relative;
-			top: 1px;
-		}
-
-		&:hover{
-			text-decoration: none!important;
-		}
-	}
-}
-
-
-.article h2{
-	margin-bottom: 10px;
-	font-family: 'Lato', sans-serif;
-	font-weight: 300;
-	text-align: center;
-	border: solid 1px black;
-}
-.article-img-container{
-	display: inline-block;
-	width: 380px;
-	height: 380px;
-	margin-left: 70px;
-	position: relative;
-
-}
-.article-img-container img{
-	margin-top: 30px;
-}
-
-.img-player{
-	position: absolute;
-	right: 0px;
-	bottom: -30px;
-	height: 50px;
-	width: 50px;
-	background-color: black;
-	line-height: 50px;
-}
-.fa-play {
-	color: #FFF;
-	-webkit-animation: clignoter 2s linear infinite;
-	animation: clignoter 2s linear infinite;
-
-}
-@-webkit-keyframes clignoter {
-
-	0%{
-		color: #FFF;
-	}
-	25%{
-		color: #000000;
-	}
-	50%{
-		color: #FFF;
-	}
-	75%{
-		color: #000000;
-	}
-	100%{
-		color: #FFF;
-	}
-}
-
-@keyframes clignoter {
-
-	0%{
-		color: #FFF;
-	}
-	25%{
-		color: #000000;
-	}
-	50%{
-		color: #FFF;
-	}
-	75%{
-		color: #000000;
-	}
-	100%{
-		color: #FFF;
-	}
-}
-
-
 hr {
 	margin-top: 50px;
 }
@@ -318,30 +101,6 @@ footer p {
 	text-transform: uppercase;
 }
 
-.like-btn {
-	width: 340px;
-	max-width: 100%;
-	height: 30px;
-	cursor: pointer;
-	background-color: transparent;
-	font-size: 14px;
-	font-family: 'Lato', sans-serif;
-	text-align: center;
-	border: solid 1px black;
-	display: block;
-	margin: auto;
-	margin-top: 25px;
-	margin-bottom: 25px;
-}
-
-li.playsong {
-	margin-bottom: 16px;
-}
-
-
-.hidden{
-	display: none;
-}
 
 .back-to-top{
 	width: 50px;
