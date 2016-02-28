@@ -16,7 +16,7 @@ app.factory('LikeService', function ($http,$q) {
 
       // Sinon on requête
       }else{
-        $http.get('likes-api.php?id='+idLike)
+        $http.get('api/likes-api.php?id='+idLike)
         .success(function(data,status){
 
           factory.likes = data;

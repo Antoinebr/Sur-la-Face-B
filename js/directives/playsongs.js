@@ -6,10 +6,9 @@ app.directive('playsong',function(){
     restrict: "C", // restriction sur une classe
     link: function(scope,element, attrs){
       console.log(scope);
+
       element.click(function(e){
         e.preventDefault();
-
-
 
         // On récupère l'url
         var songUrl = $(element).data('url');
@@ -108,6 +107,16 @@ app.directive('player',function(){
     restrict: "E", // restriction sur un element
 
     link: function(scope,element, attrs){
+
+      $(element).hide();
+
+      $(window).scroll(function(){
+        if($(window).scrollTop() > $(window).height()/3){
+          $(element).fadeIn();
+        }else{
+          $(element).fadeOut();
+        }
+      });
 
       element.click(function(e){
         e.preventDefault();
