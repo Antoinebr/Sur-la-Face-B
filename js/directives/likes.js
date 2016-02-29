@@ -16,7 +16,7 @@ app.directive('likebtn',function($http){
 
 
         $http({
-          url: "likes-api.php",
+          url: "api/likes-api.php",
           method: "POST",
           data: {"id":scope.volnum}
         }).success(function(data, status, headers, config) {
