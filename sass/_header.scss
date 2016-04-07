@@ -7,14 +7,22 @@
 	background-color: black;
 }
 .container-video {
-	height: 100vh;
-	width: 100vw;
 	overflow: hidden;
 	background-attachment: fixed;
 	background-position: center top;
+	height: 100vh;
+	position: relative;
+
+
 
 }
 
+.tag-line{
+	font-family: 'Lato';
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+}
 .bg-img{
 	background-attachment: fixed;
 	background-position: center bottom;
@@ -59,6 +67,16 @@
 
 
 
+
+@-webkit-keyframes infiniteRotate {
+	100%{
+		transform: rotate(180deg);
+	}
+}
+
+
+
+
 .header-black-box span{
 	color: #FFF;
 	position: absolute;
@@ -90,4 +108,63 @@
 	font-style: italic;
 	padding-left: 15px;
 	letter-spacing: 10px;
+}
+
+
+.ab-btn{
+	max-width: 250px;
+	height: 40px;
+	line-height: 40px;
+	min-width: 150px;
+	border: 1px solid #000;
+	display: block;
+	margin: auto;
+	text-align: center;
+	color: #000;
+	overflow: hidden;
+	font-family: 'Lato';
+	text-transform: uppercase;
+
+	margin-top: 60px;
+
+	span{
+		font-family: inherit;
+		display: block;
+		margin: auto;
+	}
+	.btn-e {
+		transition: 0.3s all;
+		position: relative;
+		top: 0px;
+		text-align: center;
+	}
+
+	.icon{
+		transition: 0.3s all;
+		position: relative;
+		top: 200px;
+		text-align: center;
+		color: #000;
+	}
+
+	&:hover{
+		text-decoration: none;
+		.txt {
+			position: relative;
+			top: -100px;
+		}
+
+		.icon{
+			top: -40px;
+		}
+
+	}
+
+
+
+}
+
+@media only screen and (max-width: 750px){
+	.container-video h1{ font-size: 60px;}
+
 }

@@ -25,7 +25,7 @@ app.directive('likebtn',function($http){
             $(element).find('span').text(likenum+1);
           }else{
             if($('.like-error').length !== 0) return;
-            $(element).after('<p class="error like-error">Vous avez déja voté </p>');
+            $(element).after('<p class="u-txtCenter u-mts like-error">Vous avez déja voté </p>');
             setTimeout(function(){
               $('.like-error').fadeOut(1000).remove();
             },1500);

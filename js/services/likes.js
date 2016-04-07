@@ -12,6 +12,7 @@ app.factory('LikeService', function ($http,$q) {
 
       // si on a deja requeté les likes pour ce même id on renvoit juste la data
       if (factory.likes !== false && factory.idLike == idLike){
+
         deferred.resolve(factory.likes);
 
       // Sinon on requête
