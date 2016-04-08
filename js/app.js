@@ -6,7 +6,9 @@ app.config(function($routeProvider){
 
   $routeProvider
 
-  .when('/',{templateUrl: 'partials/home.html', controller: 'PostsCtrl'})
+  .when('/',{templateUrl: 'partials/home-real.html'})
+
+  .when('/volume/',{templateUrl: 'partials/home.html', controller: 'PostsCtrl'})
 
   .when('/volume/:id' , {templateUrl: 'partials/albums.html', controller: 'SongsCtrl'})
 

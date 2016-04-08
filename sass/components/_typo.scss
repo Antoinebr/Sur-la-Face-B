@@ -1,6 +1,38 @@
 /** ======================================
- * Component : Typography
- * ======================================= */
+* Component : Typography
+* ======================================= */
+
+
+/**
+*
+*  Headings
+*
+*/
+
+.h1 {
+  @include title;
+  font-size: $font-size-XXL;
+}
+.h2 {
+  @include title;
+  font-size: $font-size-XL;
+}
+.h3 {
+  @include title; 
+  font-size: $font-size-L;
+}
+.h4 {
+  @include title;
+  font-size: $font-size-M;
+}
+.h5 {
+  @include title;
+  font-size: $font-size-XS;
+}
+.h6 {
+  @include title;
+  font-size: $font-size-XS;
+}
 
 .txtXXL {
   @include title;
