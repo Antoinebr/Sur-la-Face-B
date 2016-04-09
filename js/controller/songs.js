@@ -70,7 +70,8 @@ app.controller('SongsCtrl', function ($scope,$rootScope, Post, $routeParams) {
     $rootScope.destroyOrCreate();
 
     console.log("crash "+index);
-    var url = $scope.songs[index].url;
+    $rootScope.songs = $scope.songs;
+    var url = $rootScope.songs[index].url;
     $rootScope.wavesurfer.load(url);
     $rootScope.displayArtist(index);
     $rootScope.setDuration();
@@ -134,8 +135,8 @@ app.controller('SongsCtrl', function ($scope,$rootScope, Post, $routeParams) {
   */
   $rootScope.getNewSongIndex = function(index){
     console.log('THIS SONG INDEX '+index);
-    console.log("TOTAL INDEX " + $scope.songs.length);
-    if(index+1 == ($scope.songs.length)){
+    console.log("TOTAL INDEX " + $rootScope.songs.length);
+    if(index+1 == ($rootScope.songs.length)){
       return 0;
     }else{
       return index+1;
@@ -161,7 +162,7 @@ app.controller('SongsCtrl', function ($scope,$rootScope, Post, $routeParams) {
   *
   */
   $rootScope.displayArtist = function(index){
-    $rootScope.curentlyPlayingName = $scope.songs[index].name;
+    $rootScope.curentlyPlayingName = $rootScope.songs[index].name;
   };
 
 
