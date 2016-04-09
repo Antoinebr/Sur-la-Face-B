@@ -4662,6 +4662,12 @@ blockquote.right {
   margin-left: -8px !important;
 }
 
+@media only screen and (max-width: 769px) {
+  /* line 21, ../sass/website/components/player/_player.scss */
+  .player-name {
+    display: block;
+  }
+}
 /* line 1, ../sass/website/components/button/_go-back.scss */
 .go-back {
   font-size: 29px;
