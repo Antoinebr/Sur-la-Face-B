@@ -20,6 +20,7 @@ app.controller('SongsCtrl', function ($scope,$rootScope, Post, $routeParams) {
     $rootScope.curentlyPlayingName = "";
     $rootScope.curentltySongDuration = " ";
     $rootScope.curentSongTime = " ";
+    $rootScope.playerState = "not-ready";
   }
 
 
@@ -66,12 +67,13 @@ app.controller('SongsCtrl', function ($scope,$rootScope, Post, $routeParams) {
   *
   */
   $rootScope.playSong = function (index){
-
+    $rootScope.playerState = "not-ready";
     $rootScope.destroyOrCreate();
 
-    console.log("crash "+index);
+    console.log($rootScope.playerState);
     $rootScope.songs = $scope.songs;
     var url = $rootScope.songs[index].url;
+
     $rootScope.wavesurfer.load(url);
     $rootScope.displayArtist(index);
     $rootScope.setDuration();
@@ -101,6 +103,8 @@ app.controller('SongsCtrl', function ($scope,$rootScope, Post, $routeParams) {
   */
   $rootScope.runSong = function(){
     $rootScope.wavesurfer.on('ready', function () {
+      $rootScope.playerState = "ready";
+      console.log($rootScope.playerState);
       $rootScope.wavesurfer.play();
       $rootScope.setSongTime();
     });

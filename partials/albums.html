@@ -14,8 +14,10 @@
       <div ng-app="myApp" ng-controller="LikesCtrl">
         <button  class="likebtn button button--dblcontent button--ghost u-mts u-mbs" ng-click="likeCtrl.addLike()">
           <span class="initial"><i class="fa fa-heart-o"></i>  <span>{{likesNum}} </span> personnes aiment cette playlist</span>
-          <span class="hovered"> Click to like <i class="fa fa-heart-o"></i> </span>
+          <span class="hovered"> Cliquez pour liker <i class="fa fa-heart-o"></i> </span>
         </button>
+        <p class="u-hidden u-txtCenter u-mtn like-error">Vous avez déja voté </p>
+
       </div>
 
     </div>

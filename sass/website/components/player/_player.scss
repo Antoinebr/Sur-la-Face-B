@@ -1,0 +1,18 @@
+/**
+*
+*  Player
+*
+*/
+
+
+.wave-container{
+  position: relative;
+
+  .loader{
+    position: absolute;
+    top: 50%;
+    left: 50%!important;
+    margin-top: -8px;
+    margin-left: -8px!important;
+  }
+}
