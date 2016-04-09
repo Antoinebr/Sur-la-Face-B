@@ -5000,7 +5000,17 @@ footer p {
 @media only screen and (max-width: 750px) {
   /* line 170, ../sass/_header.scss */
   .container-video h1 {
-    font-size: 55px;
+    font-size: 45px;
+  }
+
+  /* line 171, ../sass/_header.scss */
+  .container-video .tag-line {
+    letter-spacing: 4px;
+  }
+
+  /* line 172, ../sass/_header.scss */
+  .container-video {
+    overflow: scroll;
   }
 }
 /* line 3, ../sass/_albums.scss */

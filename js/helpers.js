@@ -45,11 +45,11 @@ function abJsHeight(){
 
 }
 
-abJsHeight();
-
-$(window).resize(function(){
-  abJsHeight();
-});
+// abJsHeight();
+//
+// $(window).resize(function(){
+//   abJsHeight();
+// });
 
 
 
