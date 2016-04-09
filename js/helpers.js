@@ -32,11 +32,17 @@ function findIndexInData(data, property, value) {
 */
 
 function abJsHeight(){
+
   $('.u-wjs').each(function(){
-    var elementHeight = ($(this).data('height'))/100;
-    var windowHeight = $(window).height();
-    $(this).css('height',(windowHeight*elementHeight)+'px');
+    if($(window).width() > 768){
+      var elementHeight = ($(this).data('height'))/100;
+      var windowHeight = $(window).height();
+      $(this).css('height',(windowHeight*elementHeight)+'px');
+    }else{
+      $(this).css('height','auto').css('overflow','scroll');
+    }
   });
+
 }
 
 abJsHeight();

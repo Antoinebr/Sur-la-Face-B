@@ -31,14 +31,13 @@ module.exports = function(grunt){
     autoprefixer: {
       your_target: {
         options: {
-          browsers: ['last 2 versions'], // 'ie 8', 'ie 9'
+          browsers: ['last 2 versions','Firefox > 20'], // 'ie 8', 'ie 9'
           diff: 'css/file.css.patch'
         },
       },
       main: {
         expand: true,
-        src: 'css/app.css',
-        dest: ''
+        src: 'css/app.css'
       },
     },
 
