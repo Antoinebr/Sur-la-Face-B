@@ -167,7 +167,12 @@
 }
 
 @media only screen and (max-width: 750px){
-	.container-video h1{ font-size: 45px;}
+	.container-video h1{
+		font-size: 45px;
+		&:after{
+			width: auto;
+		}
+	}
 	.container-video .tag-line {letter-spacing: 4px;}
 	.container-video {overflow: scroll;}
 }

@@ -5002,13 +5002,17 @@ footer p {
   .container-video h1 {
     font-size: 45px;
   }
+  /* line 172, ../sass/_header.scss */
+  .container-video h1:after {
+    width: auto;
+  }
 
-  /* line 171, ../sass/_header.scss */
+  /* line 176, ../sass/_header.scss */
   .container-video .tag-line {
     letter-spacing: 4px;
   }
 
-  /* line 172, ../sass/_header.scss */
+  /* line 177, ../sass/_header.scss */
   .container-video {
     overflow: scroll;
   }
