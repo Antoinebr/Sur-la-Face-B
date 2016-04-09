@@ -8,24 +8,27 @@
 app.directive('likebtn',function($http){
   return{
     restrict: "C",
+    controller : function(){
 
-    link: function(scope,element, attrs){
+      this.test = function(){
+        console.log('lool');
+      };
 
-      element.click(function(e){
-        e.preventDefault();
-
+      this.addLike = function(index){
 
         $http({
           url: "api/likes-api.php",
           method: "POST",
-          data: {"id":scope.volnum}
+          data: {"id":index}
         }).success(function(data, status, headers, config) {
           if(data == "true"){
-            var likenum = parseInt($(element).find('span').text());
-            $(element).find('span').text(likenum+1);
+            console.log("succes like");
+            var likenum = parseInt($('.likebtn .initial').find('span').text());
+            $('.likebtn .initial').find('span').text(likenum+1);
           }else{
+            console.log("Deja vote");
             if($('.like-error').length !== 0) return;
-            $(element).after('<p class="u-txtCenter u-mts like-error">Vous avez déja voté </p>');
+            $('.likebtn').before('<p class="u-txtCenter u-mts like-error">Vous avez déja voté </p>');
             setTimeout(function(){
               $('.like-error').fadeOut(1000).remove();
             },1500);
@@ -34,8 +37,11 @@ app.directive('likebtn',function($http){
           //$scope.status = status;
         });
 
+      };
 
-      }); // click
-    }
+
+    },
+    controllerAs : "likeCtrl",
+
   };
 });

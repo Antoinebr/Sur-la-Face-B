@@ -8,4 +8,9 @@ app.controller('LikesCtrl', function($scope,LikeService, $routeParams){
   },function(msg){
     alert(msg);
   });
+
+
+
+
+
 });

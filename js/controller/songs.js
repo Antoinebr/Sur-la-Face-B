@@ -16,9 +16,12 @@ app.controller('SongsCtrl', function ($scope,$rootScope, Post, $routeParams) {
   *  Variable declaration
   *
   */
-  $rootScope.curentlyPlayingName = "";
-  $rootScope.curentltySongDuration = " ";
-  $rootScope.curentSongTime = " ";
+  if(!$rootScope.isPlayerBuilt){
+    $rootScope.curentlyPlayingName = "";
+    $rootScope.curentltySongDuration = " ";
+    $rootScope.curentSongTime = " ";
+  }
+
 
   /**
   *
@@ -147,6 +150,7 @@ app.controller('SongsCtrl', function ($scope,$rootScope, Post, $routeParams) {
   *
   */
   $rootScope.displayArtist = function(index){
+    if($rootScope.curentlyPlayingName !== " ") return $rootScope.curentlyPlayingName;
     $rootScope.curentlyPlayingName = $scope.songs[index].name;
   };
 
