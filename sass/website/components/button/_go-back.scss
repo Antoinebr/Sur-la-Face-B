@@ -1,0 +1,37 @@
+.go-back{
+  font-size: 29px;
+  color: rgba(146, 146, 146, 0.89);
+  position: fixed;
+  line-height: 54px;
+  height: 54px;
+  width: 54px;
+  top: 50%;
+  margin-top: -27px;
+  left: 10px;
+  transition: $trans;
+  cursor: pointer;
+
+  &:hover{
+    transform: scale(1.05);
+    color: rgba(146, 146, 146, 1)
+  }
+
+}
+
+@media only screen and (max-width: 850px){
+
+  .go-back{
+    background-color: #FFF;
+    line-height: 40px;
+    height: 40px;
+    width: 40px;
+    margin-top: -20px;
+    left: 1px;
+    font-size: 17px;
+    text-align: center;
+    border-radius: 200px;
+    z-index: 2;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
+  }
+
+}

@@ -1,0 +1,24 @@
+{
+  "name": "surlafaceb",
+  "version": "1.0.0",
+  "description": "![mockup](http://g.recordit.co/cxRoyMowTE.gif)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Antoinebr/Sur-la-Face-B.git"
+  },
+  "author": "Antoine BROSSAULT",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-auto-install": "^0.3.0",
+    "grunt-autoprefixer": "^3.0.3"
+  },
+  "bugs": {
+    "url": "https://github.com/Antoinebr/Sur-la-Face-B/issues"
+  },
+  "homepage": "https://github.com/Antoinebr/Sur-la-Face-B"
+}

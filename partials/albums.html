@@ -1,18 +1,20 @@
-<!-- <a href="#/volume/" class="clearfix u-mtm  u-mbs "title="Retour à l'acceuil">Back to the albums</a>
--->
-
-<h1 class="u-txtCenter u-mtm u-mbm"><span>Volume</span> {{title}}</h1>
-
+<div class="go-back" title="Retour à l'acceuil" back>
+  <i class="fa fa-arrow-left"></i> /
+</div>
 
 
-<div class="container">
+<h1 class="u-txtCenter u-mts"><span>Volume</span> {{title}}</h1>
+
+
+
+<div class="container u-mtm">
 
   <div class="row u-mbl">
     <div class="col-sm-6">
       <img class="u-shadowM img-center img-responsive" src="{{cover}}">
 
       <div ng-app="myApp" ng-controller="LikesCtrl">
-        <button  class="likebtn button button--dblcontent button--ghost u-mts u-mbs" ng-click="likeCtrl.addLike()">
+        <button  class="likebtn button button--dblcontent button--ghost u-mts u-mbn" ng-click="likeCtrl.addLike()">
           <span class="initial"><i class="fa fa-heart-o"></i>  <span>{{likesNum}} </span> personnes aiment cette playlist</span>
           <span class="hovered"> Cliquez pour liker <i class="fa fa-heart-o"></i> </span>
         </button>

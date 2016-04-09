@@ -20,18 +20,8 @@
 <body ng-app="myApp">
 
 
-  <!-- <div class="slide-menu menu--sticky menu--ghost">
-  <div class="container">
-
-  <a href="#/">
-  <p class="h3 u-txtCenter" style="line-height:40px;">Sur la face B</p>
-</a>
-
-</div>
-</div> -->
-
-<div class="u-mts" id="app-view" ng-view></div>
-<div ng-include="'partials/player.html'"></div>
+  <div id="app-view" ng-view></div>
+  <div ng-include="'partials/player.html'"></div>
 
 
 </body>
@@ -55,5 +45,6 @@
 <script src="js/directives/playsongs.js"></script>
 <script src="js/directives/likes.js"></script>
 <script src="js/directives/home.js"></script>
+<script src="js/directives/go-back.js"></script>
 
 </html>
