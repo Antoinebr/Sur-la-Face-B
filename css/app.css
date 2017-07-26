@@ -3667,17 +3667,6 @@ input[type="checkbox"] + label {
   bottom: 14px;
 }
 
-/* line 1, ../sass/components/banner/_promo-banner.scss */
-.banner-promo {
-  position: relative;
-  background-image: url("http://lorempicsum.com/futurama/1900/1000/4");
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 400px;
-  width: 100%;
-}
 /* line 14, ../sass/components/banner/_promo-banner.scss */
 .banner-promo .txtXL {
   color: #FFF;
